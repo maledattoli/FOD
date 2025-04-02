@@ -1,3 +1,4 @@
 # Ignorar archivos con extensión .ow y .exe
 *.ow
 *.exe
+*.o
