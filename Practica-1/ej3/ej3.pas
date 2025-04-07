@@ -114,7 +114,7 @@ var
    nombre: string[20];
 begin
      writeln('ingrese el nombre del archivo');
-     readln(nombre);
+     readln(nombre);//pone algo.txt
      assign(arch,nombre);
      rewrite(arch);
      elA(arch);

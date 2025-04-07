@@ -1,0 +1,9 @@
+12 49.99 Motorola
+4 2 Basico
+Moto E6
+3 24.00 Samsung 
+3 8 Una gama
+A 50
+7 300.00 Xiaomi
+12 5 Celular gama media
+Xiaomi Pro
