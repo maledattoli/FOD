@@ -4,7 +4,7 @@ const
 type
     empleado = record
          cod:integer;
-         nomb:string;
+         nom:string;
          monto:real;
     end;
     eCompacto = record
@@ -18,7 +18,7 @@ type
 procedure leerArchivo(var a:detalle; var dato:empleado);
 begin
      if(not eof(a))then // no se hace un while con el eof
-          read(a,dato);
+          read(a,dato)
      else
          dato.cod:= valorAlto;//para poder terminar de leer cuando se lee el final
 end;
@@ -40,21 +40,44 @@ begin
      rewrite(a);
      leerEmpleado(e);
      while(e.cod <> -1)do begin
-          write(a, e); // para escribir write ayuda estoy muy quemada
+          write(a, e); // para escribir write ayuda estoy muy quemada (no se de que hablaba)
           leerEmpleado(e);
      end;
      close(a);
 end;
+
 procedure compactar(var det:detalle; var mae:maestro);
 var
    e:empleado;
+   eC: eCompacto;
+   codActual:integer;
 begin
      reset(det);
      rewrite(mae);
      leerArchivo(det,e);
      while(e.cod <> valorAlto)do begin
-          codActual:=
-          leerArchivo(det, e);
+          codActual:= e.cod;
+          eC.totalM:=0;
+          while(e.cod = codActual)do begin
+               eC.totalM:=eC.totalM + e.monto;
+               leerArchivo(det, e);
+          end;
+          eC.cod:= codActual;//asigno despues del while es decir cuando cambia
+          write(mae,eC);
+     end;
+     close(det);
+     close(mae);
+end;
+procedure informarMaestro(var m:maestro);
+var
+   c:eCompacto;
+begin
+     reset(m);
+     while(not eof(m))do begin
+          read(m, c);
+          writeln('INFORMANDO MAESTRO');
+          writeln('el codigo es ',c.cod);
+          writeln('el monto total es ',c.totalM:0:2);
      end;
 end;
 var
@@ -64,7 +87,7 @@ begin
     assign(det,'archivoEmpleado');
     assign(mae, 'archivoCompacto');
     crearDetalle(det);
-    informarDetalle(det);
+    //informarDetalle(det); no me dio ganas de hacerlo
     compactar(det, mae);
-    informarMae(mae);
+    informarMaestro(mae);
 end.
