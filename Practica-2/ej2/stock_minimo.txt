@@ -1,0 +1,3 @@
+Codigo=1 Precio=150.00 StockActual=15 StockMin=20 Nombre= Lavandina
+Codigo=2 Precio=200.00 StockActual=30 StockMin=50 Nombre= Safirus
+Codigo=4 Precio=100.00 StockActual=10 StockMin=15 Nombre= Trapo

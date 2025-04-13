@@ -1,0 +1,4 @@
+1 150 50 20 Lavandina
+2 200 60 50 Safirus
+3 400 30 10 Esponja
+4 100 20 15 Trapo
