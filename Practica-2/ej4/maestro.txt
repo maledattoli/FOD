@@ -1,0 +1,12 @@
+1 100 30 200 Mila de soja vegetalex
+Seca
+2 100 25 100 Queso mascarpone
+Para hacer tiramisu
+3 100 20 300 Danonino
+Para que crezcas
+4 100 15 400 Serenito
+Bebida de la infancia
+5 100 10 500 Pascualina
+Barata
+6 100 60 600 Monster
+Con mucha cafeina
