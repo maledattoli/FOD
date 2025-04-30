@@ -12,7 +12,7 @@ ventajas/desventajas en cada caso).
 Nota: todos los archivos se encuentran ordenados por código de productos. En cada detalle
 puede venir 0 o N registros de un determinado producto.
 } // es decir puede tener q seguir buscando hasta encontrar el q es
-program ej3;
+program ej4;
 const
      valorAlto=9999;
      n=3; //para probarlo
